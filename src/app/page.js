@@ -24,7 +24,6 @@ import Card from "./components/card/card";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 import Link from "next/link";
-import Image from "next/image";
 // import "animate.css/animate.css";
 
 export default function Home() {
@@ -113,11 +112,11 @@ export default function Home() {
           <div className="main-content">
             <Row>
               <Col className="d-flex justify-content-center align-items-center">
-                <Image
+                <img
                   className="avatar animate__animated animate__bounceInLeft animate__delay-2s"
                   src="./logo.png"
                   alt="avatar"
-                ></Image>
+                ></img>
               </Col>
               <Col>
                 <div className="text-content">
@@ -271,7 +270,7 @@ export default function Home() {
                     My Project
                   </p>
                   <div className="image-github mb-5 animate__animated animate__fadeIn">
-                    <Image src="./github.png" alt="github-logo" />
+                    <img src="./github.png" alt="github-logo" />
                   </div>
                   <Button
                     variant="outline-dark"

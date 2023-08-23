@@ -1,6 +1,5 @@
 import { Col, Row } from "react-bootstrap";
 import "./style.scss";
-import Image from "next/image";
 
 export default function Card({ experience }) {
   return (
@@ -12,7 +11,7 @@ export default function Card({ experience }) {
             className=""
           >
             <div className="d-flex justify-content-center align-items-center company-logo">
-              <Image
+              <img
                 src={`./${experience.image}`}
                 alt="company-logo"
               />
