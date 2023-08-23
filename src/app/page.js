@@ -57,7 +57,7 @@ export default function Home() {
     },
     {
       title: "Antaresid by Telkom Indonesia",
-      image: "antares.png",
+      image: "antares2.png",
       period: "(Jan - Jun 2023)",
       role: "Developer Intern",
       jobdesk: [
