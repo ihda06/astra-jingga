@@ -1,0 +1,68 @@
+
+
+.my-card {
+    background-color: #FFFFFF;
+    padding: 20px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 35px;
+    @media only screen and (min-width: 300px) {
+        .text-title-card {
+            font-size: 11px;
+            font-weight: 800;
+        }
+
+        .text-period{
+            font-size: 9px;
+        }
+
+        .role{
+            font-size: 9px;
+        }
+        
+        .company-logo {
+            height: 60px;
+    
+            img {
+                height: 20px;
+                width: auto;
+            }
+        }
+
+        ul {
+            font-size: 9px;
+        }
+    }
+    @media only screen and (min-width: 768px) {
+        // width: 1000px;
+        min-height: 273px;
+    }
+
+    // LAPTOP
+    @media only screen and (min-width: 900px) {
+        // width: 1000px;
+        min-height: 300px;
+        .text-title-card {
+            font-size: 13px;
+            font-weight: 800;
+        }
+        
+        .text-period {
+            font-size: 9px;
+        }
+
+        ul {
+            font-size: 10px;
+        }
+    
+        .company-logo {
+            height: 60px;
+    
+            img {
+                height: 35px;
+                width: auto;
+            }
+        }
+    }
+
+    
+}
