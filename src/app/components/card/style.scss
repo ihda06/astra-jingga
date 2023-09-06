@@ -3,12 +3,16 @@
 .my-card {
     background-color: #FFFFFF;
     padding: 20px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
-    border-radius: 35px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    transition: 0.2s;
+    cursor: default;
+    
     @media only screen and (min-width: 300px) {
         .text-title-card {
-            font-size: 11px;
-            font-weight: 800;
+            font-size: 20px;
+            font-weight: 300;
+            
         }
 
         .text-period{
@@ -23,8 +27,8 @@
             height: 60px;
     
             img {
-                height: 20px;
-                width: auto;
+                height: auto;
+                width: 50px;
             }
         }
 
@@ -34,16 +38,19 @@
     }
     @media only screen and (min-width: 768px) {
         // width: 1000px;
-        min-height: 273px;
+        height: 100px;
+        .role{
+            font-size: 10px;
+        }
     }
 
     // LAPTOP
     @media only screen and (min-width: 900px) {
         // width: 1000px;
-        min-height: 300px;
+        height: 100px;
         .text-title-card {
-            font-size: 13px;
-            font-weight: 800;
+            font-size: 20px;
+            font-weight: 300;
         }
         
         .text-period {
@@ -58,11 +65,15 @@
             height: 60px;
     
             img {
-                height: 35px;
-                width: auto;
+                height: auto;
+                width: 50px;
             }
         }
     }
 
     
+}
+
+.my-card:hover{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
 }

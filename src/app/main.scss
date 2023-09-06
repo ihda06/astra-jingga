@@ -1,6 +1,5 @@
 *{
-    font-family: 'DM Sans', sans-serif;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Sen', sans-serif;
 }
 
 .main-box {
@@ -65,9 +64,7 @@
             }
         }
 
-        &.experience{
-            height: 1200px;
-        }
+        
         &.project{
             height: 528px;
         }
@@ -76,13 +73,13 @@
         }
         .text-title-2 {
             font-size: 15px;
-            font-weight: 800;
+            font-weight: 500;
         }
     }
 
     /* Medium devices (landscape tablets, 768px and up) */
     @media only screen and (min-width: 768px) {
-        padding: 0px 100px 100px 100px;
+        padding: 0px 50px 100px 50px;
         width: 700px;
         min-height: 400px;
         &.experience{
@@ -101,7 +98,7 @@
         max-height: 550px;
         .text-title-2 {
             font-size: 25px;
-            font-weight: 800;
+            font-weight: 500;
         }
     }
 }
@@ -139,7 +136,7 @@
 
         .text-title {
             font-size: 15px;
-            font-weight: 800;
+            font-weight: 600;
             margin-bottom: 40px;
         }
 
@@ -181,7 +178,7 @@
 
         .text-title {
             font-size: 32px;
-            font-weight: 800;
+            font-weight: 600;
             margin-bottom: 40px;
         }
 
@@ -255,4 +252,36 @@ a{
 .card-exp,
 .image-github {
     animation-delay: 0.5s !important;
+}
+
+.icon-skill{
+    font-size: 40px;
+    .react{
+        color: skyblue;
+        
+    }
+    .vue{
+        color: rgb(34, 197, 94);
+        animation-delay: 0.25s !important;
+    }
+    .html{
+        color: rgb(249, 115, 22);
+        animation-delay: 0.5s !important;
+    }
+    .css{
+        color: rgb(59, 130, 246);
+        animation-delay: 0.75s !important;
+    }
+    .laravel{
+        color: #F05340;
+        animation-delay: 1s !important;
+    }
+    .javascript{
+        color: rgb(250, 204, 21);
+        animation-delay: 1.25s !important;
+    }
+    .bootstrap{
+        color: rgb(168, 85, 247);
+        animation-delay: 1.5s !important;
+    }
 }

@@ -18,6 +18,13 @@ import {
   AiOutlineLinkedin,
   AiOutlineYoutube,
 } from "react-icons/ai";
+
+import { SiLaravel, SiBootstrap,
+  SiCss3,
+  SiHtml5,
+  SiJavascript,
+  SiReact,
+  SiVuedotjs, } from "react-icons/si";
 import TypewriterComponent from "typewriter-effect";
 import Card from "./components/card/card";
 // import Animate from "animate.css-react";
@@ -34,8 +41,10 @@ export default function Home() {
   const experiences = [
     {
       title: "AVPN",
+      companyweb: "https://avpn.asia/",
       image: "avpn.png",
       period: "(May - Aug 2022)",
+      periodTime: "4",
       role: "Frontend Engineer Intern",
       jobdesk: [
         "Designing UI and UX for the website project with Figma",
@@ -45,8 +54,10 @@ export default function Home() {
     },
     {
       title: "Sekolah.mu",
-      image: "sekolah.png",
+      companyweb: "https://www.sekolah.mu/",
+      image: "sekolahmu.png",
       period: "(Sep - Dec 2022)",
+      periodTime: "4",
       role: "Frontend Engineer Intern",
       jobdesk: [
         "Designing 3 website components for design system",
@@ -56,9 +67,11 @@ export default function Home() {
       ],
     },
     {
-      title: "Antaresid by Telkom Indonesia",
+      title: "Antares",
+      companyweb: "https://antares.id/",
       image: "antares2.png",
       period: "(Jan - Jun 2023)",
+      periodTime: "6",
       role: "Developer Intern",
       jobdesk: [
         "Develop 5 simple sub menus for application needs such as create the database, create API, and front-end view",
@@ -230,26 +243,49 @@ export default function Home() {
                 )
               }
             </TrackVisibility>
-            <Container>
-              <TrackVisibility once>
-                {({ isVisible }) =>
-                  isVisible && (
-                    <Row>
-                      {experiences.map((item, id) => (
-                        <Col
-                          key={id}
-                          md={6}
-                          lg={4}
-                          className="card-exp animate__animated animate__backInRight"
-                        >
-                          <Card experience={item} className />
-                        </Col>
-                      ))}
-                    </Row>
-                  )
-                }
-              </TrackVisibility>
-            </Container>
+
+            <TrackVisibility once>
+              {({ isVisible }) =>
+                isVisible && (
+                  <Row className="mb-2">
+                    {experiences.map((item, id) => (
+                      <Col
+                        key={id}
+                        md={6}
+                        lg={4}
+                        className="card-exp animate__animated animate__backInRight"
+                      >
+                        <Card experience={item} className />
+                      </Col>
+                    ))}
+                  </Row>
+                )
+              }
+            </TrackVisibility>
+            <TrackVisibility once>
+              {({ isVisible }) =>
+                isVisible && (
+                  <p className="text-title text-center animate__animated animate__fadeIn">
+                    Skills
+                  </p>
+                )
+              }
+            </TrackVisibility>
+            <TrackVisibility once>
+              {({ isVisible }) =>
+                isVisible && (
+                  <div className="icon-skill d-flex flex-wrap justify-content-center gap-2 w-100">
+                    <SiReact className="react animate__animated animate__backInRight"></SiReact>
+                    <SiVuedotjs className="vue animate__animated animate__backInRight"></SiVuedotjs>
+                    <SiHtml5 className="html animate__animated animate__backInRight"></SiHtml5>
+                    <SiCss3 className="css animate__animated animate__backInRight"></SiCss3>
+                    <SiLaravel className="laravel animate__animated animate__backInRight"></SiLaravel>
+                    <SiJavascript className="javascript animate__animated animate__backInRight"></SiJavascript>
+                    <SiBootstrap className="bootstrap animate__animated animate__backInRight"></SiBootstrap>
+                  </div>
+                )
+              }
+            </TrackVisibility>
           </div>
 
           <BsArrowRightCircle
