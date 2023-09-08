@@ -22,6 +22,10 @@
         position: absolute;
         bottom: 40px;
         left: 48%;
+        transition: 1s;
+        &:hover{
+            transform: scale(1.3);
+        }
     }
 
     
@@ -29,6 +33,10 @@
     .mini-nav {
         .mini-nav-link {
             cursor: pointer;
+            transition: 1s;
+            &:hover{
+                transform: scale(1.2);
+            }
         }
 
         /* Small devices (portrait tablets and large phones, 600px and up) */
