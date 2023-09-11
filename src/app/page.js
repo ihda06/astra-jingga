@@ -115,6 +115,12 @@ export default function Home() {
                 >
                   Secreto
                 </NavDropdown.Item>
+                <NavDropdown.Item
+                  eventKey="4.3"
+                  href="https://ihdas-playground.vercel.app/"
+                >
+                  Personal Website 2.0
+                </NavDropdown.Item>
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>
