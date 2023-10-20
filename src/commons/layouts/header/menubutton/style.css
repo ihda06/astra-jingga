@@ -1,0 +1,32 @@
+.menu:hover .activeX {
+  transform-origin: 0px, 0px;
+  height: 41px;
+  transform: translateX(0px) translateY(-14px);
+  opacity: 1;
+}
+
+.menu:hover{
+    cursor: pointer;
+}
+
+.menu:hover circle {
+  opacity: 0;
+}
+
+circle {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.activeX,
+.activeY {
+  transition: 0.5s;
+  opacity: 0;
+  fill: #54BAB9;
+}
+.menu:hover .activeY {
+  transform-origin: 0px, 0px;
+  width: 41px;
+  transform: translateX(-14px) translateY(0px);
+  opacity: 1;
+}
