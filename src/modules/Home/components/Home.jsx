@@ -7,7 +7,6 @@ import MenuItem from "./MenuItem";
 import Intro from "./Intro";
 
 export default function HomePage({}) {
-
   const image = {
     hidden: { y: -20, opacity: 0 },
     visible: {
@@ -27,7 +26,7 @@ export default function HomePage({}) {
             variants={image}
             initial="hidden"
             animate="visible"
-            transition={{ duration: 0.5, delay:0.5 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
             className="basis-2/5 flex justify-center items-center"
           >
             <Image width={250} height={250} src="/logo.png"></Image>

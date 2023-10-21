@@ -1,7 +1,7 @@
 import { create } from 'zustand'
 
 const useMenu = create((set) => ({
-  isOpen: true,
+  isOpen: false,
   toggleOpen: () => set((state) => ({ isOpen: !state.isOpen })),
 }))
 
