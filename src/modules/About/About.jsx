@@ -11,7 +11,7 @@ export default function About({}) {
             width={300}
             height={300}
             alt="image"
-            loading="lazy"
+            priority
             className="rounded-lg"
             src={galery[0].img}
           ></Image>

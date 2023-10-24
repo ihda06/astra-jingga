@@ -17,11 +17,11 @@ export default function Layouts({ children }) {
   return (
     <>
       <Menu />
-      <div className="flex flex-col  py-14 lg:py-16">
+      <div className="flex flex-col h-full pt-14 lg:pt-16">
         <header className="z-20 px-12 lg:px-24">
           <Header />
         </header>
-        <main>{children}</main>
+        <main className="h-full">{children}</main>
       </div>
       <div className="noise"></div>
     </>

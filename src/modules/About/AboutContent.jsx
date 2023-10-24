@@ -32,7 +32,7 @@ export default function AboutContent({}) {
             <div className="flex gap-3 py-2 pl-2 ">
               {SkillList.map((item, idx) => (
                 <div
-                  className="px-4 py-2 rounded-full bg-white text-lg gap-3 flex items-center shadow-lg"
+                  className="px-4 py-2 rounded-full bg-white text-lg gap-2 flex items-center shadow-lg"
                   key={idx}
                 >
                   <span className={item.color}>{item.icon}</span>
