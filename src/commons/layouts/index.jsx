@@ -1,8 +1,19 @@
+"use client"
+
+import { usePathname } from "next/navigation";
 import Header from "./header/Header";
 import "./layout.css";
 import Menu from "./menu/Menu";
+import { useEffect } from "react";
+import useMenu from "@/context/menu";
 
 export default function Layouts({ children }) {
+  const pathName = usePathname()
+  const hideMenu = useMenu((state) => state.hideMenu);
+
+  useEffect(()=>{
+    hideMenu()
+  }, [pathName])
   return (
     <>
       <Menu />

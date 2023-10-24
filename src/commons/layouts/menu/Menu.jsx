@@ -8,10 +8,8 @@ import { useRouter } from "next/navigation";
 export default function Menu({}) {
   const router = useRouter();
   const isOpen = useMenu((state) => state.isOpen);
-  const hideMenu = useMenu((state) => state.hideMenu);
   const handleClick = (href) => {
     router.push(href);
-    hideMenu();
   };
   const menuContainer = {
     initial: {

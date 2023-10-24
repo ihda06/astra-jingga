@@ -4,12 +4,12 @@ import { galery } from "@/commons/constants/gallery";
 
 export default function About({}) {
   return (
-    <div className="flex flex-col gap-8 lg:gap-0 lg:flex-row py-14 lg:px-24 px-12">
+    <div className="flex flex-col gap-8 lg:flex-row py-14 lg:px-24 px-12">
       <div className="basis-2/5 flex justify-center w-full">
         <div className="">
           <Image
-            width={400}
-            height={400}
+            width={300}
+            height={300}
             alt="image"
             loading="lazy"
             className="rounded-lg"
