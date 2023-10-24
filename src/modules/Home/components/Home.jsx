@@ -12,9 +12,9 @@ export default function HomePage({}) {
 
   return (
     <>
-      <div className="flex flex-col pt-14 lg:px-48">
+      <div className="flex flex-col pt-14 lg:px-64 px-14">
         <div className="flex lg:flex-row flex-col-reverse lg:gap-0 gap-10  ">
-          <div className="basis-3/5">
+          <div className="basis-3/5 lg:flex lg:items-center">
             <Intro isVisible={!isOpen} />
           </div>
           <ImageSection isVisible={!isOpen}/>

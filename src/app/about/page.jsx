@@ -1,1 +1,3 @@
-export default function About({}) {return(<>About</>)}
+import About from "@/modules/About";
+
+export default function Page({}) {return(<About/>)}

@@ -1,5 +1,6 @@
 "use client";
 
+import { menus } from "@/commons/constants/menu";
 import useMenu from "@/context/menu";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/navigation";
@@ -7,11 +8,15 @@ import { useRouter } from "next/navigation";
 export default function Menu({}) {
   const router = useRouter();
   const isOpen = useMenu((state) => state.isOpen);
+  const hideMenu = useMenu((state) => state.hideMenu);
+  const handleClick = (href) => {
+    router.push(href);
+    hideMenu();
+  };
   const menuContainer = {
     initial: {
       height: "100%",
       width: "100%",
-
       backgroundColor: "#54BAB9",
       opacity: 0,
     },
@@ -65,39 +70,21 @@ export default function Menu({}) {
           exit="close"
           className="z-10 absolute flex flex-col justify-center px-10 md:px-80 items-center font-extrabold text-5xl gap-2 uppercase text-start text-white"
         >
-          <div
-            className="pt-0 pb-1 w-full flex gap-1 items-end overflow-hidden hover:-translate-y-1 duration-300 cursor-pointer "
-            onClick={() => router.push("/")}
-          >
-            <span className="text-sm">01</span>
-            <motion.h1 className="" variants={MenuItem}>
-              Home
-            </motion.h1>
-          </div>
-          <div
-            className="pt-0 pb-1 w-full flex gap-1 items-end overflow-hidden hover:-translate-y-1 duration-300 cursor-pointer "
-            onClick={() => router.push("/project")}
-          >
-            <span className="text-sm">02</span>
-            <motion.h1 className="" variants={MenuItem}>
-              Project
-            </motion.h1>
-          </div>
-          <div
-            className="pt-0 pb-1 w-full flex gap-1 items-end overflow-hidden hover:-translate-y-1 duration-300 cursor-pointer "
-            onClick={() => router.push("/about")}
-          >
-            <span className="text-sm">01</span>
-            <motion.h1 className="" variants={MenuItem}>
-              About
-            </motion.h1>
-          </div>
-          <div className="pt-0 pb-1 w-full flex gap-1 items-end overflow-hidden hover:-translate-y-1 duration-300 cursor-pointer "  onClick={() => router.push("/contact")}>
-            <span className="text-sm">01</span>
-            <motion.h1 className="" variants={MenuItem}>
-              Contact
-            </motion.h1>
-          </div>
+          {menus.map((item, idx) => (
+            <div
+              key={idx}
+              className="pt-0 pb-1 w-full flex gap-1 items-end overflow-hidden hover:-translate-y-1 duration-300 cursor-pointer "
+              onClick={() => {
+                handleClick(item.href);
+              }}
+            >
+              <span className="text-sm">{idx + 1}</span>
+              <motion.h1 className="" variants={MenuItem}>
+                {item.title}
+              </motion.h1>
+              <motion.div initial={{x:3000}} animate={{x:0}} exit={{x:3000}} transition={{delay:0.25, duration:0.5}} className="w-full border-dashed border-t-2 bg-yellow-50 self-center"></motion.div>
+            </div>
+          ))}
         </motion.div>
       )}
     </AnimatePresence>
