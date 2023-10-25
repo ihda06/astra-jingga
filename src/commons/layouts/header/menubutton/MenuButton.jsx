@@ -193,7 +193,6 @@ export default function MenuButton({className}) {
       initial="initial"
       animate={!isOpen ? "animate" : "active"}
       whileHover={!isOpen ? "hover" : "active"}
-      onPan="active"
       variants={container}
       className={"lg:p-5 p-2 bg-white menu rounded-lg shadow-[5px_4px_3.35867px_0px_rgba(0,0,0,0.08)] lg:8px_7px_3.35867px_0px_rgba(0,0,0,0.08) cursor-pointer active:shadow-none duration-100 "+(className)}
       onClick={handleClickMenu}

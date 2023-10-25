@@ -30,9 +30,9 @@ export default function ListContents({}) {
   };
   return (
     <>
-      <div className="w-full border-b-2 border-neutral-800 py-2">
+      <motion.div initial={{y:-20, opacity:0}} animate={{y:0, opacity:1}} transition={{duration:0.5}} className="w-full border-b-2 border-neutral-800 py-2">
         <h1 className="text-4xl font-bold uppercase">Project</h1>
-      </div>
+      </motion.div>
       <div className=" w-full overflow-x-auto no-scrollbar ">
         {experiences.map((item, idx) => (
           <motion.div
