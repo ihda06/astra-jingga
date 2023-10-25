@@ -1,7 +1,7 @@
 import { create } from 'zustand'
 
 const useProject = create((set) => ({
-  index: -0,
+  index: -1,
   activeIndex: (item) => set(() => ({ index: item })),
   deactiveIndex: () => set(() => ({ index: -1 })),
 }))
