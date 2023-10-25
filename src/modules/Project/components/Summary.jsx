@@ -30,7 +30,8 @@ export default function Summary({
         animate={{ opacity: 1 }}
         exit={{opacity:0}}
         transition={{duration:0.5}}
-        className={`w-full rounded-tr-[150px] bg-[${backgroundColor}] lg:h-full lg:pr-14 relative overflow-hidden`}
+        className={`w-full rounded-tr-[150px] lg:h-full lg:pr-14 relative overflow-hidden`}
+        style={{backgroundColor:backgroundColor}}
       >
         <div className="w-full h-96 absolute">
           <Image

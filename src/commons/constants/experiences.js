@@ -1,6 +1,6 @@
 export const experiences = [
   {
-    title: "Frontend Internship #1",
+    title: "Internship #1",
     location: "Singapore",
     companyName: "AVPN",
     companyWeb: "https://avpn.asia/",
@@ -12,7 +12,7 @@ export const experiences = [
       "linear-gradient(to bottom, rgba(24,221,228,0) 0%,rgb(228,31,24,1) 100%)",
     period: "May - Aug 2022",
     periodTime: "4",
-    role: "Frontend Engineer Intern",
+    role: "Frontend",
     jobdesk: [
       "Designed user interface (UI) and user experience (UX) for the website project using Figma design tool.",
       "Created mockup prototypes for the website project using ReactJs, incorporating previously designed UI/UX.",
@@ -20,7 +20,7 @@ export const experiences = [
     ],
   },
   {
-    title: "Frontend Internship #2",
+    title: "Internship #2",
     location: "Jakarta Timur",
     companyName: "Sekolah.mu",
     companyWeb: "https://www.sekolah.mu/",
@@ -32,7 +32,7 @@ export const experiences = [
       "linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%)",
     period: "(Sep - Dec 2022)",
     periodTime: "4",
-    role: "Frontend Engineer Intern",
+    role: "Frontend",
     jobdesk: [
       "Designing 3 website components for design system",
       "Creating unit test for each component",
@@ -41,7 +41,7 @@ export const experiences = [
     ],
   },
   {
-    title: "Frontend Internship #3",
+    title: "Internship #3",
     location: "Bandung",
     companyName: "Antares.id",
     companyweb: "https://antares.id/",
@@ -53,7 +53,7 @@ export const experiences = [
       "linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%)",
     period: "(Jan - Jun 2023)",
     periodTime: "6",
-    role: "Developer Intern",
+    role: "Developer",
     jobdesk: [
       "Develop 5 simple sub menus for application needs such as create the database, create API, and front-end view",
       "Fix and improve more than 10 sub menu",
