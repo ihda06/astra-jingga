@@ -21,7 +21,7 @@ export default function ImageSection({ isVisible }) {
           transition={{ duration: 0.5 }}
           className="basis-2/5 flex justify-center items-center"
         >
-          <Image width={250} height={250} src="/logo.png"></Image>
+          <Image width={250} height={250} src="/logo.png" alt="logo"></Image>
         </motion.div>
       )}
     </AnimatePresence>
