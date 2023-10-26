@@ -2,6 +2,7 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { Geologica } from "next/font/google";
+import Typewriter from "typewriter-effect";
 const geologica = Geologica({ subsets: ["latin"] });
 
 export default function Intro({ isVisible }) {
@@ -40,7 +41,8 @@ export default function Intro({ isVisible }) {
             className="flex flex-col gap-3 justify-center text-center lg:text-left"
           >
             <motion.h2 variants={children} className="text-sm text-yellow-800">
-              Hey! Let me introduce my self <span className="animate-bounce text-lg">👋</span>
+              Hey! Let me introduce my self{" "}
+              <span className="animate-bounce text-lg">👋</span>
             </motion.h2>
             <div className="">
               <motion.div
@@ -65,9 +67,16 @@ export default function Intro({ isVisible }) {
                 ANWARI
               </motion.h1>
             </div>
-            <motion.h2 variants={children} className="text-xl font-bold">
-              I&apos;m front end developer
-            </motion.h2>
+            <motion.div variants={children} className="text-xl font-bold flex gap-1 justify-center lg:justify-start">
+              <h2>I&apos;m</h2>
+              <Typewriter
+                options={{
+                  strings: ["frontend developer", "traveler"],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>

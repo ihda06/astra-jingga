@@ -3,13 +3,19 @@
 import { menus } from "@/commons/constants/menu";
 import useMenu from "@/context/menu";
 import { AnimatePresence, motion } from "framer-motion";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function Menu({}) {
+  const pathName = usePathname();
   const router = useRouter();
   const isOpen = useMenu((state) => state.isOpen);
+  const hideMenu = useMenu((state) => state.hideMenu);
   const handleClick = (href) => {
-    router.push(href);
+    if (pathName === href) {
+      hideMenu();
+    } else {
+      router.push(href);
+    }
   };
   const menuContainer = {
     initial: {
@@ -80,7 +86,13 @@ export default function Menu({}) {
               <motion.h1 className="" variants={MenuItem}>
                 {item.title}
               </motion.h1>
-              <motion.div initial={{x:3000}} animate={{x:0}} exit={{x:3000}} transition={{delay:0.25, duration:0.5}} className="w-full h-1 bg-white self-center"></motion.div>
+              <motion.div
+                initial={{ x: 3000 }}
+                animate={{ x: 0 }}
+                exit={{ x: 3000 }}
+                transition={{ delay: 0.25, duration: 0.5 }}
+                className="w-full h-1 bg-white self-center"
+              ></motion.div>
             </div>
           ))}
         </motion.div>

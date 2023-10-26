@@ -20,6 +20,7 @@ export default function ImageSection({ isVisible }) {
           exit="exit"
           transition={{ duration: 0.5 }}
           className="basis-2/5 flex justify-center items-center"
+          alt="personal image"
         >
           <Image width={250} height={250} src="/logo.png" alt="logo"></Image>
         </motion.div>
