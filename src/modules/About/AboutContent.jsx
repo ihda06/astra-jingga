@@ -1,17 +1,18 @@
 import { SkillList } from "@/commons/constants/skills";
 import Marquee from "react-fast-marquee";
-import { SiVuedotjs } from "react-icons/si";
+import { GiMountains } from "react-icons/gi";
+import { BsCodeSquare } from "react-icons/bs";
 
 export default function AboutContent({}) {
   return (
     <>
-      <div className="flex flex-col gap-5">
-        <div className="flex gap-2 items-center">
-          <h1 className="font-bold text-3xl uppercase">About</h1>
-          <div className="h-0.5 bg-black w-full"></div>
-          <div className=""></div>
+      <div className="flex flex-col gap-5 ">
+        <div className="flex gap-2 items-center p-4  font-bold justify-between text-amber-800 text-3xl bg-white shadow-md rounded-b-lg">
+          <h1 className="uppercase ">About</h1>
+          <GiMountains></GiMountains>
+          {/* <div className="h-0.5 bg-black w-full"></div> */}
         </div>
-        <p className="lg:text-lg font-semibold text-neutral-500 text-sm">
+        <p className="lg:text-lg px-4 font-normal tracking-wide text-yellow-800 text-xs">
           I am a digital business graduate who has an interest in front-end
           developers, graphic designers, and UI/UX designers. I am capable of
           designing UI Websites with ReactJs or VueJs, I have experienced
@@ -21,9 +22,10 @@ export default function AboutContent({}) {
         </p>
       </div>
       <div className="flex flex-col gap-5">
-        <div className="flex items-center gap-2">
-          <h1 className="font-bold text-3xl uppercase">Skills</h1>
-          <div className="h-0.5 bg-black w-full"></div>
+        <div className="flex gap-2 items-center p-4  font-bold justify-between text-amber-800 text-3xl bg-white shadow-md rounded-b-lg">
+          <h1 className="uppercase ">Skills</h1>
+          <BsCodeSquare></BsCodeSquare>
+          {/* <div className="h-0.5 bg-black w-full"></div> */}
         </div>
         <div className="">
           {/* <div className="flex flex-grow-0 bg-white w-full overflow-x-auto "><p></p></div>
@@ -36,7 +38,9 @@ export default function AboutContent({}) {
                   key={idx}
                 >
                   <span className={item.color}>{item.icon}</span>
-                  <span className="font-semibold text-neutral-500">{item.title}</span>
+                  <span className="font-semibold text-neutral-500">
+                    {item.title}
+                  </span>
                 </div>
               ))}
             </div>

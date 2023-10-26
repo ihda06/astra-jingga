@@ -3,7 +3,7 @@
 import { experiences } from "@/commons/constants/experiences";
 import useProject from "@/context/project";
 import { motion } from "framer-motion";
-import { FaArrowAltCircleRight } from "react-icons/fa";
+import { FaArrowAltCircleRight, FaBriefcase } from "react-icons/fa";
 
 export default function ListContents({}) {
   const index = useProject((state) => state.index);
@@ -13,7 +13,7 @@ export default function ListContents({}) {
   };
 
   const container = {
-    initial: { y: 100, opacity: 0 },
+    initial: { y: -100, opacity: 0 },
     animate: { y: 0, opacity: 1, transition: { duration: 0.5 } },
     whileHover: { y: 0, opacity: 1 },
   };
@@ -30,10 +30,16 @@ export default function ListContents({}) {
   };
   return (
     <>
-      <motion.div initial={{y:-20, opacity:0}} animate={{y:0, opacity:1}} transition={{duration:0.5}} className="w-full border-b-2 border-neutral-800 py-2">
-        <h1 className="text-4xl font-bold uppercase">Project</h1>
+      <motion.div
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className="w-full flex justify-between items-end shadow-md bg-white rounded-b-lg px-2 py-4 border-neutral-800 "
+      >
+        <h1 className="text-4xl font-bold uppercase text-amber-800">Project</h1>
+        <h1 className="text-xl font-extrabold text-neutral-400">{experiences.length}</h1>
       </motion.div>
-      <div className=" w-full overflow-x-auto no-scrollbar ">
+      <div className=" w-full overflow-x-auto no-scrollbar px-2">
         {experiences.map((item, idx) => (
           <motion.div
             initial="initial"
@@ -41,7 +47,7 @@ export default function ListContents({}) {
             animate="animate"
             variants={container}
             key={idx}
-            className="border-b-2 border-neutral-800 py-5 font-bold text-lg"
+            className="shadow-md mb-2 border-neutral-800 py-5 font-bold text-lg cursor-pointer p-2 bg-white rounded-lg"
             onMouseEnter={() => {
               handleHover(idx);
             }}
@@ -49,7 +55,7 @@ export default function ListContents({}) {
               activeIndex(-1);
             }}
           >
-            <div className="flex justify-between cursor-pointer">
+            <div className="flex justify-between overflow-hidden">
               <motion.div
                 variants={itemText}
                 className="flex items-center gap-2"

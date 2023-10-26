@@ -80,7 +80,7 @@ export default function Menu({}) {
               <motion.h1 className="" variants={MenuItem}>
                 {item.title}
               </motion.h1>
-              <motion.div initial={{x:3000}} animate={{x:0}} exit={{x:3000}} transition={{delay:0.25, duration:0.5}} className="w-full border-dashed border-t-2 bg-yellow-50 self-center"></motion.div>
+              <motion.div initial={{x:3000}} animate={{x:0}} exit={{x:3000}} transition={{delay:0.25, duration:0.5}} className="w-full h-1 bg-white self-center"></motion.div>
             </div>
           ))}
         </motion.div>

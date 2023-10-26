@@ -16,7 +16,7 @@ export default function Project({}) {
             {index > -1 && <Summary {...experiences[index]} />}
           </AnimatePresence>
         </div>
-        <div className="basis-1/2 lg:px-36 px-5 w-full flex flex-col gap-3 items-center text-center pt-14">
+        <div className="basis-1/2 lg:px-36 px-5 w-full flex flex-col gap-3 pt-14">
           <ListContents />
         </div>
       </div>

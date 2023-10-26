@@ -4,10 +4,10 @@ import { AnimatePresence, motion } from "framer-motion";
 import MenuButton from "./menubutton/MenuButton";
 import DarkModeButton from "./themebutton/DarkModeButton";
 import useMenu from "@/context/menu";
+import Image from "next/image";
 
 export default function Header({}) {
   const isOpen = useMenu((state) => state.isOpen);
- 
 
   const logo = {
     initial: {
@@ -29,7 +29,6 @@ export default function Header({}) {
 
   return (
     <>
-      
       <div className="flex justify-between items-center">
         <motion.div
           initial="initial"
@@ -38,13 +37,18 @@ export default function Header({}) {
           transition={{
             delay: 0.5,
           }}
-          className={"text-xl font-black"}
+          className="duration-300"
         >
-          Ihda Anwari
+          <Image
+            src="/personallogo.png"
+            height={100}
+            width={100}
+            className={isOpen ? "invert" : ""}
+          ></Image>
         </motion.div>
         <div className="flex items-center">
           <div className="text-6xl">
-            <DarkModeButton />
+            <DarkModeButton open={isOpen} />
           </div>
           <div className={"text-6xl "}>
             <MenuButton className="" />

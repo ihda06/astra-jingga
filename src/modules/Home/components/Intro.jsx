@@ -39,7 +39,7 @@ export default function Intro({ isVisible }) {
             }}
             className="flex flex-col gap-3 justify-center text-center lg:text-left"
           >
-            <motion.h2 variants={children} className="text-sm">
+            <motion.h2 variants={children} className="text-sm text-yellow-800">
               Hey! Let me introduce my self <span className="animate-bounce text-lg">👋</span>
             </motion.h2>
             <div className="">
