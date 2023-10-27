@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 export default function About({}) {
   return (
-    <div className="flex flex-col items-center gap-8 lg:flex-row py-32 lg:px-52 px-12">
+    <div className="flex flex-col items-center gap-8 lg:flex-row py-32 lg:py-0 lg:h-full lg:px-52 px-12">
       <div className="basis-1/5 flex justify-center w-full">
         <motion.div
           initial={{ x: -50, opacity: 0 }}
