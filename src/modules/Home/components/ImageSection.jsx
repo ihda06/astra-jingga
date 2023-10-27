@@ -1,7 +1,9 @@
+import useIsMobile from "@/hooks/useIsMobile";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 
 export default function ImageSection({ isVisible }) {
+  const isMobile = useIsMobile()
   const image = {
     hidden: { y: -20, opacity: 0 },
     visible: {
@@ -12,7 +14,7 @@ export default function ImageSection({ isVisible }) {
   };
   return (
     <AnimatePresence>
-      {isVisible && (
+      {isVisible && !isMobile && (
         <motion.div
           variants={image}
           initial="hidden"

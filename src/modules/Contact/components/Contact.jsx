@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 export default function Contact({}) {
   return (
     <>
-      <div className="flex flex-col py-14 lg:flex-row lg:px-52 px-14 lg:h-[500px] gap-10 lg:gap-20">
+      <div className="flex flex-col items-center lg:flex-row lg:px-52 lg:h-full px-12 py-32 lg:py-0 gap-10 lg:gap-20">
         <motion.div
           initial={{ x: -50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}

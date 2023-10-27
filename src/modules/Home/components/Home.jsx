@@ -12,14 +12,14 @@ export default function HomePage({}) {
 
   return (
     <>
-      <div className="flex flex-col pt-14 lg:px-64 px-14">
+      <div className="flex flex-col h-full justify-center lg:px-64 px-14">
         <div className="flex lg:flex-row flex-col-reverse lg:gap-0 gap-10  ">
           <div className="basis-3/5 lg:flex lg:items-center">
             <Intro isVisible={!isOpen} />
           </div>
           <ImageSection isVisible={!isOpen}/>
         </div>
-        <div className="flex justify-around pt-16 font-bold text-sm">
+        <div className="flex justify-around pt-7 lg:pt-16 text-sm">
           {menu.map((item, idx) => (
             <MenuNav title={item.title} key={idx} href={item.href} isVisible={!isOpen} />
           ))}

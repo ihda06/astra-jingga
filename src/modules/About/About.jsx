@@ -7,9 +7,8 @@ import { motion } from "framer-motion";
 
 export default function About({}) {
   return (
-    <div className="flex flex-col gap-8 lg:flex-row py-14 lg:px-52 px-12">
+    <div className="flex flex-col items-center gap-8 lg:flex-row py-32 lg:px-52 px-12">
       <div className="basis-1/5 flex justify-center w-full">
-       
         <motion.div
           initial={{ x: -50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -26,7 +25,7 @@ export default function About({}) {
         </motion.div>
       </div>
       <div
-        className="basis-4/5 lg:max-w-full overflow-hidden flex flex-col  gap-5"
+        className="basis-4/5 flex flex-col md:overflow-hidden gap-5 w-full"
       >
         <AboutContent></AboutContent>
       </div>

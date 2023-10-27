@@ -16,11 +16,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="32x32" />
+        <link rel="icon" href="/favicon2.ico" sizes="32x32" />
       </head>
       <body className={inter.className}>
         <NextTopLoader
-          color="#4b95de"
+          color="#E9DAC1"
           initialPosition={0.08}
           crawlSpeed={200}
           height={3}
@@ -28,8 +28,8 @@ export default function RootLayout({ children }) {
           showSpinner={false}
           easing="ease"
           speed={200}
-          shadow="0 0 10px #05b6d3,0 0 5px #45c6c0"
-          zIndex={0}
+          shadow="0 0 10px #E9DAC1,0 0 5px #E9DAC1"
+          zIndex={200}
         />
         <ThemeProviderContext>
           <Layouts>{children}</Layouts>

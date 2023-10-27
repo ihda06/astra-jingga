@@ -44,7 +44,7 @@ export default function AboutContent({}) {
           CorelDraw
         </motion.p>
       </motion.div>
-      <motion.div initial="initial" animate="animate" exit="initial" variants={parent} className="flex flex-col gap-5">
+      <motion.div initial="initial" animate="animate" exit="initial" variants={parent} className="flex flex-col  gap-5">
         <motion.div variants={child} className="flex gap-2 items-center p-4  font-bold justify-between text-amber-800 text-3xl bg-white shadow-md rounded-b-lg">
           <h1 className="uppercase ">Skills</h1>
           <BsCodeSquare></BsCodeSquare>

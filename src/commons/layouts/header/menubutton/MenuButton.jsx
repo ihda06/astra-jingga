@@ -69,6 +69,7 @@ export default function MenuButton({className}) {
       rotate: -45,
       x: 7,
       y: -15,
+      fill:"white"
     },
   };
 
@@ -120,6 +121,7 @@ export default function MenuButton({className}) {
       rotate: -45,
       x: 7,
       y: 15,
+      fill:"white"
     },
   };
 
@@ -194,7 +196,7 @@ export default function MenuButton({className}) {
       animate={!isOpen ? "animate" : "active"}
       whileHover={!isOpen ? "hover" : "active"}
       variants={container}
-      className={"lg:p-5 p-2 bg-white menu rounded-lg shadow-[5px_4px_3.35867px_0px_rgba(0,0,0,0.08)] lg:8px_7px_3.35867px_0px_rgba(0,0,0,0.08) cursor-pointer active:shadow-none duration-100 "+(className)}
+      className={"hover:cursor-pointer rounded-lg"+(className)}
       onClick={handleClickMenu}
     >
       <motion.svg

@@ -1,7 +1,7 @@
 export const menu = [
-  { title: "About Me", href: "/me" },
-  { title: "My Project", href: "/me" },
-  { title: "Resume", href: "/me" },
+  { title: "About Me", href: "/about" },
+  { title: "My Project", href: "/project" },
+  { title: "Resume", href: "/resume.pdf" },
 ];
 export const menus = [
   { title: "Home", href: "/" },

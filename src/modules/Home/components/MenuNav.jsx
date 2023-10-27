@@ -62,7 +62,7 @@ export default function MenuNav({ title, href, isVisible }) {
             animate="visible"
             whileHover="hover"
             variants={parent}
-            className="overflow-hidden px-3 hover:cursor-pointer active:translate-x-1 active:translate-y-1 text-center"
+            className="overflow-hidden px-3 hover:cursor-pointer active:translate-x-1 active:translate-y-1 text-center font-semibold"
           >
             <Link href={href}>
               <motion.h1 variants={text}>{title}</motion.h1>

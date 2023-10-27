@@ -3,6 +3,7 @@
 import { menus } from "@/commons/constants/menu";
 import useMenu from "@/context/menu";
 import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 
 export default function Menu({}) {
@@ -10,13 +11,13 @@ export default function Menu({}) {
   const router = useRouter();
   const isOpen = useMenu((state) => state.isOpen);
   const hideMenu = useMenu((state) => state.hideMenu);
-  const handleClick = (href) => {
-    if (pathName === href) {
-      hideMenu();
-    } else {
-      router.push(href);
-    }
-  };
+  // const handleClick = (href) => {
+  //   if (pathName === href) {
+  //     hideMenu();
+  //   } else {
+  //     router.push(href);
+  //   }
+  // };
   const menuContainer = {
     initial: {
       height: "100%",
@@ -78,13 +79,10 @@ export default function Menu({}) {
             <div
               key={idx}
               className="pt-0 pb-1 w-full flex gap-1 items-end overflow-hidden hover:-translate-y-1 duration-300 cursor-pointer "
-              onClick={() => {
-                handleClick(item.href);
-              }}
             >
               <span className="text-sm">{idx + 1}</span>
               <motion.h1 className="" variants={MenuItem}>
-                {item.title}
+                <Link href={item.href}>{item.title}</Link>
               </motion.h1>
               <motion.div
                 initial={{ x: 3000 }}

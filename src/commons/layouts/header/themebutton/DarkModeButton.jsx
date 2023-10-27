@@ -50,9 +50,9 @@ export default function DarkModeButton({ onClick, open }) {
     <>
       <motion.svg
         xmlns="http://www.w3.org/2000/svg"
-        width="80"
+        width="68"
         height="68"
-        viewBox="0 0 80 68"
+        viewBox="0 0 68 68"
         fill="none"
         whileHover={{
           scale:1.3,

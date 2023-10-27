@@ -12,7 +12,7 @@ export default function Project({}) {
   const isMobile = useIsMobile();
   return (
     <>
-      <div className="flex md:flex-row flex-col-reverse h-full lg:max-h-[561px]">
+      <div className="flex md:flex-row flex-col-reverse h-full overflow-hidden pt-28">
         <div className="basis-1/2 pt-14">
           <AnimatePresence>
             {index>-1 && !isMobile && <Summary {...experiences[index]} />}
