@@ -6,6 +6,7 @@ export const experiences = [
     companyWeb: "https://avpn.asia/",
     companyType: "Social Company",
     image: "/frame33.png",
+    logo: "/avpn.png",
     backgroundColor: "#E41F18",
     textColor: "dark",
     gradient:
@@ -26,6 +27,7 @@ export const experiences = [
     companyWeb: "https://www.sekolah.mu/",
     companyType: "Edu Tech",
     image: "/fra.png",
+    logo: "/sekolahmu.png",
     backgroundColor: "#fff",
     textColor: "light",
     gradient:
@@ -47,6 +49,7 @@ export const experiences = [
     companyweb: "https://antares.id/",
     companyType: "IOT Service",
     image: "/Antares.png",
+    logo: "/antares2.png",
     backgroundColor: "#fff",
     textColor: "light",
     gradient:

@@ -3,11 +3,11 @@
 import { experiences } from "@/commons/constants/experiences";
 import useProject from "@/context/project";
 import { motion } from "framer-motion";
-import { FaArrowAltCircleRight, FaBriefcase } from "react-icons/fa";
+import { FaArrowAltCircleRight } from "react-icons/fa";
 
 export default function ListContents({}) {
-  const index = useProject((state) => state.index);
   const activeIndex = useProject((state) => state.activeIndex);
+  const deactiveIndex = useProject((state) => state.deactiveIndex);
   const handleHover = (idx) => {
     activeIndex(idx);
   };
@@ -37,7 +37,9 @@ export default function ListContents({}) {
         className="w-full flex justify-between items-end shadow-md bg-white rounded-b-lg px-2 py-4 border-neutral-800 "
       >
         <h1 className="text-4xl font-bold uppercase text-amber-800">Project</h1>
-        <h1 className="text-xl font-extrabold text-neutral-400">{experiences.length}</h1>
+        <h1 className="text-xl font-extrabold text-neutral-400">
+          {experiences.length}
+        </h1>
       </motion.div>
       <div className=" w-full overflow-x-auto no-scrollbar px-2">
         {experiences.map((item, idx) => (
@@ -52,7 +54,7 @@ export default function ListContents({}) {
               handleHover(idx);
             }}
             onMouseLeave={() => {
-              activeIndex(-1);
+              deactiveIndex();
             }}
           >
             <div className="flex justify-between overflow-hidden">

@@ -21,12 +21,12 @@ export default function About({}) {
             priority
             className="object-cover"
             src={galery[0].img}
+            placeholder="blur"
+            blurDataURL={galery[0].img}
           ></Image>
         </motion.div>
       </div>
-      <div
-        className="basis-4/5 flex flex-col md:overflow-hidden gap-5 w-full"
-      >
+      <div className="basis-4/5 flex flex-col md:overflow-hidden gap-5 w-full">
         <AboutContent></AboutContent>
       </div>
     </div>

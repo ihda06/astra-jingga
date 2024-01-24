@@ -46,6 +46,7 @@ export default function Header({}) {
             width={50}
             className={isOpen ? "invert" : ""}
             alt="personal logo"
+            priority
           ></Image>
         </motion.div>
         <div className="flex items-center">

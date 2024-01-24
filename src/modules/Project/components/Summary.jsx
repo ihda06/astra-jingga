@@ -6,7 +6,6 @@ import Image from "next/image";
 export default function Summary({
   title,
   location,
-  companyWeb,
   companyName,
   companyType,
   image,
@@ -15,7 +14,6 @@ export default function Summary({
   gradient,
   period,
   periodTime,
-  role,
   jobdesk,
 }) {
   const textHeader =
@@ -28,10 +26,10 @@ export default function Summary({
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        exit={{opacity:0}}
-        transition={{duration:0.5}}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.5 }}
         className={`w-full rounded-tr-[150px] h-full lg:pr-14 relative overflow-hidden`}
-        style={{backgroundColor:backgroundColor}}
+        style={{ backgroundColor: backgroundColor }}
       >
         <div className="w-full h-96 absolute">
           <Image
@@ -40,6 +38,8 @@ export default function Summary({
             priority
             className="object-cover"
             src={image}
+            blurDataURL={image}
+            placeholder="blur"
           ></Image>
           <div
             className="w-full h-full absolute"

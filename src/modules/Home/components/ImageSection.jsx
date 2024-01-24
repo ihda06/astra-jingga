@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 
 export default function ImageSection({ isVisible }) {
-  const isMobile = useIsMobile()
+  const isMobile = useIsMobile();
   const image = {
     hidden: { y: -20, opacity: 0 },
     visible: {
@@ -24,7 +24,13 @@ export default function ImageSection({ isVisible }) {
           className="basis-2/5 flex justify-center items-center"
           alt="personal image"
         >
-          <Image width={250} height={250} src="/logo.png" alt="logo"></Image>
+          <Image
+            width={250}
+            height={250}
+            src="/logo.png"
+            alt="logo"
+            priority
+          ></Image>
         </motion.div>
       )}
     </AnimatePresence>
